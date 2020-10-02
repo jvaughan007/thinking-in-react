@@ -3,8 +3,7 @@ import './App.css';
 import STORE from './STORE';
 import Header from './Header/Header';
 import Features from './FeaturesForm/Features';
-import Summary from './Cart/Summary';
-import Total from './Cart/Total';
+import Cart from './Cart/Cart';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -42,14 +41,7 @@ class App extends Component {
             <h2>Customize your laptop</h2>
             <Features updateFeats={this.updateFeature} selectedState={this.state.selected} features={this.props.features} />
           </form>
-          <section className='main__summary'>
-            <h2>Your cart</h2>
-            <Summary selectedState={this.state.selected}/>
-            <div className='summary__total'>
-              <div className='summary__total__label'>Total</div>
-              <div className='summary__total__value'><Total selectedState={this.state.selected} /></div>
-            </div>
-          </section>
+          <Cart selectedState={this.state.selected}/>
         </main>
       </div>
     );
