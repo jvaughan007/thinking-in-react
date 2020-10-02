@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import STORE from './STORE';
 import Header from './Header/Header';
-import Features from './FeaturesForm/Features';
 import Cart from './Cart/Cart';
+import Form from './FeaturesForm/Form';
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -37,11 +37,8 @@ class App extends Component {
       <div className='App'>
         <Header />
         <main>
-          <form className='main__form'>
-            <h2>Customize your laptop</h2>
-            <Features updateFeats={this.updateFeature} selectedState={this.state.selected} features={this.props.features} />
-          </form>
-          <Cart selectedState={this.state.selected}/>
+          <Form updateFeats={this.updateFeature} selectedState={this.state.selected} features={this.props.features} />
+          <Cart selectedState={this.state.selected} />
         </main>
       </div>
     );

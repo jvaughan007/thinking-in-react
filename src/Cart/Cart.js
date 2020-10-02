@@ -9,7 +9,7 @@ export default function Cart(props) {
             <Summary selectedState={props.selectedState}/>
             <div className='summary__total'>
               <div className='summary__total__label'>Total</div>
-              <div className='summary__total__value'><Total selectedState={props.selectedStates} /></div>
+              <div className='summary__total__value'><Total selectedState={props.selectedState} /></div>
             </div>
           </section>
     )
