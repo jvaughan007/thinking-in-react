@@ -5,10 +5,7 @@ import Header from './Header/Header';
 import Cart from './Cart/Cart';
 import Form from './FeaturesForm/Form';
 
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-});
+
 
 class App extends Component {
   state = {
